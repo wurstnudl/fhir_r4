@@ -16,7 +16,7 @@ class Bundle extends Resource {
     super.implicitRules,
     super.language,
     this.identifier,
-    required this.type,
+    this.type,
     this.timestamp,
     this.total,
     this.link,
