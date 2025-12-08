@@ -16,7 +16,7 @@ class Bundle extends Resource {
     super.implicitRules,
     super.language,
     this.identifier,
-    this.type,
+    required this.type,
     this.timestamp,
     this.total,
     this.link,
@@ -60,7 +60,7 @@ class Bundle extends Resource {
         json,
         'type',
         BundleType.fromJson,
-      ),
+      ) ?? BundleType.searchset,
       timestamp: JsonParser.parsePrimitive<FhirInstant>(
         json,
         'timestamp',
