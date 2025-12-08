@@ -60,7 +60,7 @@ class Bundle extends Resource {
         json,
         'type',
         BundleType.fromJson,
-      )!,
+      ),
       timestamp: JsonParser.parsePrimitive<FhirInstant>(
         json,
         'timestamp',
